@@ -38,6 +38,8 @@ var addMember =  func(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
+        date,_ := http.ParseTime(member.RegistrationDate)
+	member.RegistrationDate = date.Format("2006-01-02")
 	Members = append(Members, member)
 	getMember(w,r)
 }
