@@ -51,7 +51,6 @@ function addRow(name, email, registration_date) {
 }
 
 function sendData() {
-    console.log("Prepering data")
     member = getMember()
     xhttp.onload = function() {
         if (this.status == 200) {
@@ -61,12 +60,10 @@ function sendData() {
             console.log(this)
             email_hint.innerHTML = xhttp.responseText
         }
-        console.log("Data recieved")
     }
 
     sendRequest("POST", "member");
     xhttp.send(JSON.stringify(member));
-    console.log("Data sent")
 }
 
 function getData() {
