@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<title>Member Club</title>
+<link rel="stylesheet" href="./style.css" />
+<meta http-equiv=" Content-Type " content="text/html; charset=utf-8 ">
+
+<head>
+</head>
+
+<body>
+    <h1>Welcome to the Club!</h1>
+    <form name="test " method="post ">
+        <h2>New member</h2>
+        <p><b>Name</b><br>
+            <input id="name" type="text" required size="40 ">
+        </p>
+        <p id="name_hint"></p>
+        <p><b>E-mail</b>
+            <br>
+            <input id="e-mail" type="email" required size="40 ">
+        </p>
+        <p id="email_hint"></p>
+        <p>
+            <input type="button" onclick="validate() " value="Отправить ">
+            <input type="reset" value="Очистить ">
+        </p>
+    </form>
+
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Registration date</th>
+        </tr>
+    </table>
+    <script src="./form.js "></script>
+</body>
